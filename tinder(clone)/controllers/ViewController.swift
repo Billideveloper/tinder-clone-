@@ -22,8 +22,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var signuplabel: UITapGestureRecognizer!
     
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
@@ -31,9 +30,6 @@ class ViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(segueSignUp(_:)))
         termslabel.addGestureRecognizer(tap)
     }
-    
-
-    
     
     func setUpUI(){
         
@@ -53,10 +49,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func googlebtn(_ sender: Any) {
+        
     }
     
     
     @IBAction func emailbtn(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "signme", sender: nil)
     }
     
 

@@ -6,6 +6,10 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
+import FirebaseStorage
+import Firebase
 
 class signUpVc: UIViewController {
     
@@ -25,6 +29,9 @@ class signUpVc: UIViewController {
     
     @IBOutlet var signIngesture: UITapGestureRecognizer!
     
+    let db = Database.database().reference()
+    
+    var image: UIImage? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,33 +41,24 @@ class signUpVc: UIViewController {
         
     }
     
-    
-    func setupUI(){
-        
-        signuptitle()
-        setImageview()
-        
-    }
-    
-    
-    
-    
-    
-    
-    @IBAction func selectimageGesturebtn(_ sender: Any) {
-        
-        
-    }
-    
-    
+
     @IBAction func takeToSignIn(_ sender: Any) {
         
+        self.performSegue(withIdentifier: "signIn", sender: nil)
     }
+    
+    
     
     
     @IBAction func signUpbtnClicked(_ sender: Any) {
+        
+        
+        self.view.endEditing(true)
+        signUpuser()
+        
+        
+        
     }
-    
     
     
     @IBAction func backBtn(_ sender: Any) {
