@@ -179,7 +179,7 @@
                                     <constraint firstAttribute="height" constant="45" id="MoC-Ox-lO5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="new-password"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FK1-IR-RdB">
                                 <rect key="frame" x="25" y="465" width="364" height="45"/>

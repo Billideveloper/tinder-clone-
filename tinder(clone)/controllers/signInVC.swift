@@ -44,8 +44,20 @@ class signInVC: UIViewController {
     }
     @IBAction func signInbtn(_ sender: Any) {
         
+        self.view.endEditing(true)
+        
+        self.signInuser {
+            
+            print("sucess")
+            
+        } onFailure: { (error) in
+            
+            print(Error_Empty_TryAgain)
+        }
+
         
     }
+    
     
     
     @IBAction func backbtn(_ sender: Any) {

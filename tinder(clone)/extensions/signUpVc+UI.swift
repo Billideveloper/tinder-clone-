@@ -99,22 +99,22 @@ extension signUpVc{
     }
     
     
-    func signUpuser(){
+    func signUpuser(onSuccess: @escaping() -> Void, onFailure: @escaping(_ Error: String) -> Void){
         
-      
         Api.User.signUpuser(withUserinfo: self.fullName.text!, useremail: self.fullEmail.text!, userpassword: self.password.text!, profileimage: self.image) {
             
-            DispatchQueue.main.async {
-                print("here")
-            }
+            onSuccess()
             
             
-        } onError: { (errorMessage) in
-            print("error")
+        } onFailure: { (error) in
+            
+            onFailure(Error_Empty_TryAgain)
         }
 
 
     }
+    
+   
     
     
     

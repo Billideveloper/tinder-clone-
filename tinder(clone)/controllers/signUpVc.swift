@@ -52,9 +52,17 @@ class signUpVc: UIViewController {
     
     @IBAction func signUpbtnClicked(_ sender: Any) {
         
-        
         self.view.endEditing(true)
-        signUpuser()
+        
+        signUpuser {
+            
+            print("SignedIn Sucessfully")
+            
+        } onFailure: { (error) in
+            
+            print(Error_Empty_TryAgain)
+        }
+
         
         
         
