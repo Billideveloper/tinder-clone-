@@ -21,6 +21,11 @@
 		183A7CFA256D4521005D7D35 /* signInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A7CF9256D4521005D7D35 /* signInVC.swift */; };
 		183A7CFD256D46DB005D7D35 /* forgotPassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A7CFC256D46DB005D7D35 /* forgotPassVC.swift */; };
 		183A7D00256D48E3005D7D35 /* signVc+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A7CFF256D48E3005D7D35 /* signVc+UI.swift */; };
+		1840A01C256FE5C800A351A2 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840A01B256FE5C800A351A2 /* MessageTableViewController.swift */; };
+		1840A01F256FF01400A351A2 /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840A01E256FF01400A351A2 /* PeopleTableViewController.swift */; };
+		1840A022256FF2D100A351A2 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840A021256FF2D100A351A2 /* UserTableViewCell.swift */; };
+		1840A025256FFBF200A351A2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840A024256FFBF200A351A2 /* User.swift */; };
+		1840A0372570022D00A351A2 /* DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840A0362570022D00A351A2 /* DownloadImage.swift */; };
 		187AD1AA256F8CD90070A6C1 /* storgaeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187AD1A9256F8CD90070A6C1 /* storgaeServices.swift */; };
 		187AD1AD256F94F00070A6C1 /* Ref.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187AD1AC256F94F00070A6C1 /* Ref.swift */; };
 		18E5BCF8256EAD8D00DE8EF4 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5BCF7256EAD8D00DE8EF4 /* Api.swift */; };
@@ -48,6 +53,11 @@
 		183A7CF9256D4521005D7D35 /* signInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signInVC.swift; sourceTree = "<group>"; };
 		183A7CFC256D46DB005D7D35 /* forgotPassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forgotPassVC.swift; sourceTree = "<group>"; };
 		183A7CFF256D48E3005D7D35 /* signVc+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "signVc+UI.swift"; sourceTree = "<group>"; };
+		1840A01B256FE5C800A351A2 /* MessageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
+		1840A01E256FF01400A351A2 /* PeopleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
+		1840A021256FF2D100A351A2 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		1840A024256FFBF200A351A2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1840A0362570022D00A351A2 /* DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImage.swift; sourceTree = "<group>"; };
 		187AD1A9256F8CD90070A6C1 /* storgaeServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storgaeServices.swift; sourceTree = "<group>"; };
 		187AD1AC256F94F00070A6C1 /* Ref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ref.swift; sourceTree = "<group>"; };
 		18E5BCF7256EAD8D00DE8EF4 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
@@ -104,6 +114,8 @@
 				18E5BCFD256EB16E00DE8EF4 /* MessageApi.swift */,
 				187AD1A9256F8CD90070A6C1 /* storgaeServices.swift */,
 				187AD1AC256F94F00070A6C1 /* Ref.swift */,
+				1840A021256FF2D100A351A2 /* UserTableViewCell.swift */,
+				1840A024256FFBF200A351A2 /* User.swift */,
 			);
 			path = "tinder(clone)";
 			sourceTree = "<group>";
@@ -115,6 +127,7 @@
 				183A7CEC256D23A7005D7D35 /* signUpVc+UI.swift */,
 				183A7CFF256D48E3005D7D35 /* signVc+UI.swift */,
 				1833507D256E7AEB00B0CEDB /* signupImagepicker.swift */,
+				1840A0362570022D00A351A2 /* DownloadImage.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -126,6 +139,8 @@
 				183A7CE9256D15A4005D7D35 /* signUpVc.swift */,
 				183A7CF9256D4521005D7D35 /* signInVC.swift */,
 				183A7CFC256D46DB005D7D35 /* forgotPassVC.swift */,
+				1840A01B256FE5C800A351A2 /* MessageTableViewController.swift */,
+				1840A01E256FF01400A351A2 /* PeopleTableViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -304,13 +319,18 @@
 				183A7D00256D48E3005D7D35 /* signVc+UI.swift in Sources */,
 				183A7CFD256D46DB005D7D35 /* forgotPassVC.swift in Sources */,
 				187AD1AA256F8CD90070A6C1 /* storgaeServices.swift in Sources */,
+				1840A025256FFBF200A351A2 /* User.swift in Sources */,
 				1833507E256E7AEB00B0CEDB /* signupImagepicker.swift in Sources */,
+				1840A01C256FE5C800A351A2 /* MessageTableViewController.swift in Sources */,
 				18E5BCF8256EAD8D00DE8EF4 /* Api.swift in Sources */,
 				183A7CCB256CE64B005D7D35 /* ViewController.swift in Sources */,
+				1840A022256FF2D100A351A2 /* UserTableViewCell.swift in Sources */,
 				183A7CED256D23A7005D7D35 /* signUpVc+UI.swift in Sources */,
 				183A7CC7256CE64B005D7D35 /* AppDelegate.swift in Sources */,
+				1840A0372570022D00A351A2 /* DownloadImage.swift in Sources */,
 				183A7CC9256CE64B005D7D35 /* SceneDelegate.swift in Sources */,
 				18E5BCFB256EADE100DE8EF4 /* UserApi.swift in Sources */,
+				1840A01F256FF01400A351A2 /* PeopleTableViewController.swift in Sources */,
 				183A7CD1256CE64B005D7D35 /* tinder_clone_.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -48,7 +48,14 @@ class signInVC: UIViewController {
         
         self.signInuser {
             
-            print("sucess")
+//            var initialVc: UIViewController
+//            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//            initialVc = storyBoard.instantiateViewController(identifier: TabBar_Identifier)
+//            initialVc.modalPresentationStyle = .fullScreen
+//            self.present(initialVc, animated: true, completion: nil)
+            
+            
+            (self.view.window!.windowScene?.delegate as! SceneDelegate).configureController()
             
         } onFailure: { (error) in
             

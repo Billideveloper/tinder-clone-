@@ -15,6 +15,12 @@ let Ref_User = "Users"
 let Storage_Profile_Root = "gs://tinder-b3b44.appspot.com"
 let Storage_Profile = "profiles"
 
+let User_Cell_Identifier = "users"
+let Message_Cell_Identifier = "message"
+
+
+let TabBar_Identifier = "tabVc"
+let SignInVc_Identifier = "welcomeVc"
 
 let Profile_Image_url = "photoUrl"
 let User_Uid = "uid"

@@ -56,7 +56,9 @@ class signUpVc: UIViewController {
         
         signUpuser {
             
-            print("SignedIn Sucessfully")
+            // cheack user login status 
+            
+            (self.view.window!.windowScene?.delegate as! SceneDelegate).configureController()
             
         } onFailure: { (error) in
             

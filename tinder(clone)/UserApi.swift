@@ -76,11 +76,57 @@ func signUpuser(withUserinfo username: String, useremail: String, userpassword: 
             onSuccess()
             print(results?.user.uid as Any)
             
-            
-            
-            
         }
         
     }
+    
+    
+    func resetPassword(email:String, onSuccess: @escaping() -> Void, onFailure: @escaping(_ Error: String) -> Void){
+        
+        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+            
+            if error != nil{
+                onFailure(error!.localizedDescription)
+            }
+            
+            onSuccess()
+        }
+    }
+    
+    
+    func Logout(onSuccess: @escaping() -> Void, onFailure: @escaping(_ Error: String) -> Void){
+        do{
+            try Auth.auth().signOut()
+            onSuccess()
+        } catch{
+            onFailure(error.localizedDescription)
+            return
+        }
+        
+//        (UIApplication.shared.delegate as! SceneDelegate).configureController()
+    
+        
+    }
+    
+    
+    func observeUsers(onSuccess: @escaping(UserComplition)){
+        
+        Ref().databaseUsers.observe(.childAdded) { (snapshot) in
+            
+            if let dict = snapshot.value as? Dictionary<String, Any>{
+        
+                if let newUser = User.transformUser(dict: dict){
+                    
+                    onSuccess(newUser)
+                    
+                
+                }
+                
+            }
+        }
+        
+    }
+    
+    typealias UserComplition = (User) -> Void
     
 }
