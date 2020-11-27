@@ -17,6 +17,7 @@ let Storage_Profile = "profiles"
 
 let User_Cell_Identifier = "users"
 let Message_Cell_Identifier = "message"
+let Chat_cell_Identifier = "chatview"
 
 
 let TabBar_Identifier = "tabVc"

@@ -7,16 +7,67 @@
 
 import UIKit
 
-class PeopleTableViewController: UITableViewController {
+class PeopleTableViewController: UITableViewController, UISearchResultsUpdating {
     
-
+    @IBOutlet weak var cardView: UIView!
+    
+    var searchController: UISearchController = UISearchController(searchResultsController: nil)
+    
     var user: [User] = []
+    
+    var searchResults: [User] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         observeUser()
+        setupSearchController()
+        setTableView()
       
+    }
+    
+    func setTableView(){
+        
+        
+        self.tableView.tableFooterView = UIView()
+        
+        
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+        if searchController.searchBar.text == nil || searchController.searchBar.text!.isEmpty{
+            view.endEditing(true)
+        }else{
+            
+            let textLowerCased = searchController.searchBar.text!.lowercased()
+            filterContetnt(for: textLowerCased)
+        }
+        
+        tableView.reloadData()
+        
+    }
+    
+    func filterContetnt(for searchtext: String){
+        searchResults = self.user.filter {
+            return $0.name.lowercased().range(of: searchtext) != nil
+        }
+        
+        
+        
+    }
+    
+    
+    
+    func setupSearchController(){
+        
+        searchController.searchBar.placeholder = "Search user"
+        searchController.searchResultsUpdater = self
+        definesPresentationContext = true
+        searchController.searchBar.tintColor = UIColor.black
+        navigationItem.hidesSearchBarWhenScrolling = true
+        searchController.obscuresBackgroundDuringPresentation = false
+        navigationItem.searchController = searchController
     }
     
     func observeUser(){
@@ -31,19 +82,38 @@ class PeopleTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.user.count
+//        if searchController.isActive{
+//            return searchResults.count
+//        }else{
+//
+//            return self.user.count
+//        }
+        
+        return searchController.isActive ? searchResults.count : self.user.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: User_Cell_Identifier, for: indexPath) as! UserTableViewCell
-        let newUser = user[indexPath.row]
+        let newUser = searchController.isActive ? searchResults[indexPath.row] : user[indexPath.row]
         cell.loadData(newUser)
 
 
         return cell
     }
     
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? UserTableViewCell{
+            
+          let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+          let ChatVc = storyBoard.instantiateViewController(identifier: Chat_cell_Identifier) as! ChatViewController
+
+            ChatVc.userImage = cell.profileImage.image
+            ChatVc.userName = cell.userName.text
+            self.navigationController?.pushViewController(ChatVc, animated: true)
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.

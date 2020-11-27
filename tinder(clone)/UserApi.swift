@@ -34,7 +34,7 @@ func signUpuser(withUserinfo username: String, useremail: String, userpassword: 
                 User_Email: authdata.user.email as Any,
                 User_Name: username as Any,
                 User_Profile_Url: "",
-                User_Status:""
+                User_Status:"Welcome to Tinder"
             ]
             
             let profilephotosref = Ref().storageSpecificProfile(uid: authdata.user.uid)

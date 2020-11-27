@@ -28,6 +28,7 @@
 		1840A0372570022D00A351A2 /* DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840A0362570022D00A351A2 /* DownloadImage.swift */; };
 		187AD1AA256F8CD90070A6C1 /* storgaeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187AD1A9256F8CD90070A6C1 /* storgaeServices.swift */; };
 		187AD1AD256F94F00070A6C1 /* Ref.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187AD1AC256F94F00070A6C1 /* Ref.swift */; };
+		18AF4D902570E0AA00EAA13E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF4D8F2570E0AA00EAA13E /* ChatViewController.swift */; };
 		18E5BCF8256EAD8D00DE8EF4 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5BCF7256EAD8D00DE8EF4 /* Api.swift */; };
 		18E5BCFB256EADE100DE8EF4 /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5BCFA256EADE100DE8EF4 /* UserApi.swift */; };
 		18E5BCFE256EB16E00DE8EF4 /* MessageApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5BCFD256EB16E00DE8EF4 /* MessageApi.swift */; };
@@ -60,6 +61,7 @@
 		1840A0362570022D00A351A2 /* DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImage.swift; sourceTree = "<group>"; };
 		187AD1A9256F8CD90070A6C1 /* storgaeServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storgaeServices.swift; sourceTree = "<group>"; };
 		187AD1AC256F94F00070A6C1 /* Ref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ref.swift; sourceTree = "<group>"; };
+		18AF4D8F2570E0AA00EAA13E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		18E5BCF7256EAD8D00DE8EF4 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		18E5BCFA256EADE100DE8EF4 /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
 		18E5BCFD256EB16E00DE8EF4 /* MessageApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageApi.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				183A7CFC256D46DB005D7D35 /* forgotPassVC.swift */,
 				1840A01B256FE5C800A351A2 /* MessageTableViewController.swift */,
 				1840A01E256FF01400A351A2 /* PeopleTableViewController.swift */,
+				18AF4D8F2570E0AA00EAA13E /* ChatViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			files = (
 				18E5BCFE256EB16E00DE8EF4 /* MessageApi.swift in Sources */,
 				187AD1AD256F94F00070A6C1 /* Ref.swift in Sources */,
+				18AF4D902570E0AA00EAA13E /* ChatViewController.swift in Sources */,
 				183A7CEA256D15A4005D7D35 /* signUpVc.swift in Sources */,
 				183A7CE7256D0758005D7D35 /* viewController+UI.swift in Sources */,
 				183A7CFA256D4521005D7D35 /* signInVC.swift in Sources */,
